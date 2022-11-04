@@ -71,24 +71,38 @@ namespace PIANO
 
         public static void Načítání()
         {
+            int test
+
+            string nas_tmp;
+            string trv_tmp;
+
             using (StreamReader sr = new StreamReader("Config.txt"))
             {
-                nasobic = Convert.ToInt32(sr.ReadLine());
-                trvani = Convert.ToInt32(sr.ReadLine());
+                nas_tmp = sr.ReadLine();
+                trv_tmp = sr.ReadLine();
             }
-
-            if (nasobic <= 36 || nasobic >= 1259)
+            if(int.TryParse(nas_tmp, out test))
             {
+                nasobic=Convert.ToInt32(nas_tmp)
+                if (nasobic <= 36 || nasobic >= 1259)
+                {
                 nasobic = 500;
-            }
-
-            if (trvani <= 0)
+                }
+            }else
             {
-                trvani = 200;
+                nasobic = 500;  
+            }
+            if (int.TryParse(trv_tmp, out test))
+            { 
+                      if (trvani <= 0)
+                      {
+                         trvani = 200;
+                      }
+            }else
+            {
+                trvani=200;
             }
         }
-
-
         public static void Čtení(string klávesa)
         {
             string[] pole = { "Q", "W", "E", "R", "T", "Z", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Y", "X", "C", "V", "B", "N", "M" };
