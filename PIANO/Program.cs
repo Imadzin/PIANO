@@ -26,7 +26,6 @@ namespace PIANO
                 Config(cteni);
             }
         }
-
         public static void ConfigTest()
         {
             if (!File.Exists("Config.txt"))
