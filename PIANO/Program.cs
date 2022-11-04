@@ -15,7 +15,7 @@ namespace PIANO
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Piano v1.1.0");
+                Console.WriteLine("Piano v1.1.1");
                 Console.WriteLine("* [Multiply] -> nastavení");
                 string cteni = Convert.ToString(Console.ReadKey(true).Key);
 
